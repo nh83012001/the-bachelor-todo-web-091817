@@ -1,8 +1,10 @@
-describe "bachelor" do 
+require "pry"
+describe "bachelor" do
 
   let(:data) { JSON.parse(File.read('spec/fixtures/contestants.json')) }
 
   describe "#get_first_name_of_season_winner" do
+    #binding.pry
     it "returns 'Tessa' when passed the data and 'season 10'" do
       expect(get_first_name_of_season_winner(data, "season 10")).to eq("Tessa")
     end
@@ -71,4 +73,3 @@ describe "bachelor" do
   end
 
 end
-
